@@ -34,4 +34,8 @@ public class Attractee : MonoBehaviour {
 			Velocity = newVelocity;
 		}
 	}
+
+	private void OnTriggerEnter(Collider other) {
+		Destroy(gameObject);
+	}
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
 public class Launcher : MonoBehaviour {
-	private const float SimulationInterval = 0.1f;
+	private const float SimulationInterval = 0.05f;
 	private const float LaunchForce = 2f;
 
 	public static readonly List<PathSimulation> SimulatedProjectiles = new List<PathSimulation>();

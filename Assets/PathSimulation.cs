@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PathSimulation : Attractee {
     public override int GetSimulationSpeed() {
-        return 10;
+        return 20;
     }
 
     private void Start() {
-        Invoke("Remove", 3f);
+        Invoke("Remove", 1f);
     }
 
     public void Remove() {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using cakeslice;
 using UnityEngine;
 
@@ -30,7 +31,13 @@ public class PlayerController : MonoBehaviour {
 		// While we are dragging a line from a launcher
 		if (Input.GetMouseButton(0) && _oldLauncher != null) {
 			_oldLauncher.SimulateLaunch(_oldObject.transform.position - groundPoint);
-
+//			Vector3[] positions = new Vector3[Launcher.SimulatedProjectiles.Count];
+//			int j = 0;
+//			for (int i = Launcher.SimulatedProjectiles.Count - 1; i >= 0; i--) {
+//				positions[j++] = Launcher.SimulatedProjectiles[i].transform.position;
+//			}
+//			_lineRenderer.SetPositions(positions);
+//			_lineRenderer.enabled = true;
 			return;
 		}
 		_lineRenderer.enabled = false;
