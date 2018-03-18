@@ -71,4 +71,8 @@ public class PlayerController : MonoBehaviour {
 			_oldObject = newObject;
 		}
 	}
+
+	private void HandleTouchInput() {
+		Touch touch = Input.touches[0];
+	}
 }
