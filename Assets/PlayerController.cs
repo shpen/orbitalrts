@@ -29,13 +29,6 @@ public class PlayerController : MonoBehaviour {
 
 		// While we are dragging a line from a launcher
 		if (Input.GetMouseButton(0) && _oldLauncher != null) {
-			//_lineRenderer.enabled = true;
-//			_lineRenderer.SetPositions(new []{
-//				_oldObject.transform.position, groundPoint
-//			});
-
-//			List<Vector3> positions = _oldLauncher.GetTrajectory(_oldObject.transform.position - groundPoint, 0.1f, 10);
-//			DrawTrajectory(positions);
 			_oldLauncher.SimulateLaunch(_oldObject.transform.position - groundPoint);
 
 			return;
@@ -70,13 +63,5 @@ public class PlayerController : MonoBehaviour {
 			}
 			_oldObject = newObject;
 		}
-	}
-
-
-
-
-	void DrawTrajectory(List<Vector3> positions) {
-		_lineRenderer.positionCount = positions.Count;
-		_lineRenderer.SetPositions(positions.ToArray());
 	}
 }
